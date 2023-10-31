@@ -26,7 +26,7 @@ const BookService = () => {
 
         console.log(booking);
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('http://localhost:5555/bookings', {
             method: 'POST', 
             headers: {
                 'content-type': 'application/json'
