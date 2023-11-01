@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
+import useServices from "../../../hooks/useServices";
 
 
 const Services = () => {
-    const [services, setServices] = useState([]);
+    // const [services, setServices] = useState([]);
 
-    useEffect(() => {
-        fetch('http://localhost:5555/services')
-            .then(res => res.json())
-            .then(data => setServices(data));
-    }, [])
+    // useEffect(() => {
+    //     fetch('http://localhost:5555/services')
+    //         .then(res => res.json())
+    //         .then(data => setServices(data));
+    // }, [])
+
+    const services = useServices();
 
     return (
         <div className="mt-4">
